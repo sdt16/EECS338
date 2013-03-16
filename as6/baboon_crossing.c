@@ -221,16 +221,14 @@ int main(int argc, char* argv[]) {
 
   void* status;
 
-  // Join Left Crossing Baboons
-  for (int i = 0; i < TOTAL_A; i++) {
+   for (int i = 0; i < TOTAL_A; i++) {
     if (pthread_join(a_threads[i], &status) == -1) {
       perror("Joining a");
       exit(1);
     }
   }
 
-  // Join Right Crossing Baboons
-  for (int i = 0; i < TOTAL_B; i++) {
+   for (int i = 0; i < TOTAL_B; i++) {
     if (pthread_join(b_threads[i], &status) == -1) {
       perror("Joining b");
       exit(1);
